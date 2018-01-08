@@ -42,7 +42,7 @@ function renderRecipe(recipe) {
 	    "</span>" +
 	  "</span>" +
 
-  "<img src='" + recipe.source.url + "' />" +
+  "<img src='img/recipes/320x350/"+recipe.name+".jpg'/>" +
 "</a>")
 }
 
@@ -78,7 +78,7 @@ function renderActivity(recipe) {
  
  "</span>"+
 
- "<div class='bg-image' style='background-image: url('"+recipe.image+"')'></div>"+
+ "<div class='bg-image' style='background-image: url(" + recipe.image + ")'></div>"+
 "</a>");    
 }
 
