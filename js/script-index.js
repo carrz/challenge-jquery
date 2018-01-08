@@ -3,6 +3,7 @@ $(document).ready( function(){
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
 	printNews();
+	renderActivities(activities);
 });
 
 //Desapareciendo 
@@ -19,7 +20,6 @@ function renderHighlightedRecipes(recipesArray) {
      renderRecipe(recipesArray[i])
    }
  }
-    //console.log('Recipes: ', recipesArray);
 }
 
 /*
@@ -46,14 +46,19 @@ function renderRecipe(recipe) {
 "</a>")
 }
 
-
-
 /*
 * Función que se encarga de pintar todas las actividades
 */
 function renderActivities(activitiesArray) {
 	console.log('Activities: ', activitiesArray);
-}
+	for(var i=0; i<activitiesArray.length; i++){
+		if(activities.length > 0){
+	     $('.wrapper-message').hide();
+	     }
+	    renderActivity(activities[i]);
+	   }
+	 }
+
 
 /*
 * Función que se encarga de pintar una actividad
